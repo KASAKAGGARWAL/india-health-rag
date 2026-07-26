@@ -30,15 +30,19 @@ The application uses **Llama 3.1** through the **Groq API** for response generat
 The prompt is designed to encourage grounded responses. It instructs the language model to answer only from the retrieved document context and to clearly indicate when the required information is not available. This approach helps reduce hallucinations and keeps the generated answers aligned with the source document.
 
 
-## What I Learned
+## What I Learned / Research Undertaken
 
-This project gave me practical experience with Retrieval-Augmented Generation (RAG), a concept that I had previously understood only at a theoretical level. Building the application helped me understand how multiple components work together to create a document-based question-answering system.
+This project provided me with hands-on experience in building a complete Retrieval-Augmented Generation (RAG) application, from document ingestion to answer generation. Before starting this assignment, I had a basic understanding of Large Language Models but limited practical experience with RAG systems and vector databases.
 
-During development, I learned how to extract clean text from an HTML document, divide it into overlapping chunks, and convert those chunks into semantic embeddings using a Sentence Transformer model. I also gained practical experience with FAISS for vector indexing and similarity search, which allowed the application to retrieve the most relevant document sections for a given question.
+During the implementation, I learned how to extract and clean text from HTML documents using BeautifulSoup and how to split large documents into overlapping chunks using LangChain's `RecursiveCharacterTextSplitter`. I understood the importance of choosing an appropriate chunk size and overlap to preserve context and improve retrieval quality.
 
-Another important learning outcome was understanding the role of prompt engineering in RAG systems. I learned that the quality of the generated response depends not only on the language model but also on the retrieved context and the instructions provided in the prompt. Integrating the Groq API and building the Streamlit interface also gave me experience in connecting machine learning components into a complete end-to-end application.
+I explored how embedding models work and learned how the **BAAI/bge-small-en-v1.5** model converts text into dense vector representations that capture semantic meaning. I also researched **FAISS (Facebook AI Similarity Search)** and gained an understanding of how vector embeddings are indexed and searched efficiently to retrieve the most relevant document chunks.
 
-Finally, I improved my debugging skills while resolving dependency issues, configuring the development environment, and integrating different Python libraries into a working system.
+While integrating the language model, I learned the importance of prompt engineering and how carefully designed prompts help ensure that responses are grounded in the retrieved context rather than relying solely on the model's internal knowledge. This helped me understand how Retrieval-Augmented Generation reduces hallucinations and improves the reliability of AI-generated answers.
+
+Beyond the AI concepts, I strengthened my practical software development skills by organizing the application into modular components, managing project dependencies, using Git and GitHub for version control, documenting the project with a professional README, and debugging compatibility issues to ensure the application worked correctly on a fresh project setup.
+
+Overall, this assignment significantly improved my understanding of Retrieval-Augmented Generation, semantic search, embedding models, vector databases, prompt engineering, and the end-to-end workflow involved in developing a document-based AI assistant. It also gave me valuable experience in building, testing, debugging, and documenting a complete AI application.
 
 
 ## Limitations
