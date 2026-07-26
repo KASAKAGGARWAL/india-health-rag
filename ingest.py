@@ -86,7 +86,7 @@ def build_faiss_index(embeddings):
 
     index.add(embeddings.astype("float32"))
 
-    faiss.write_index(index, FAISS_INDEX_PATH)
+    faiss.write_index(index, str(FAISS_INDEX_PATH))
 
     print(f"FAISS index saved to {FAISS_INDEX_PATH}")
 
@@ -97,7 +97,7 @@ def save_chunks(chunks):
     Save text chunks to disk.
     """
 
-    with open(CHUNKS_PATH, "wb") as f:
+    with open(str(CHUNKS_PATH), "wb") as f:
         pickle.dump(chunks, f)
 
     print(f"Saved {len(chunks)} chunks.")

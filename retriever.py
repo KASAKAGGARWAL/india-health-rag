@@ -25,7 +25,7 @@ class Retriever:
 
         self.index = faiss.read_index(str(FAISS_INDEX_PATH))
 
-        with open(CHUNKS_PATH, "rb") as f:
+        with open(str(CHUNKS_PATH), "rb") as f:
             self.chunks = pickle.load(f)
 
     def search(self, query, top_k=TOP_K_RESULTS):
