@@ -6,6 +6,7 @@ from groq import Groq
 from config import LLM_MODEL
 from prompts import SYSTEM_PROMPT, USER_PROMPT
 
+
 load_dotenv()
 
 client = Groq(
