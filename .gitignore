@@ -2,7 +2,7 @@
 .venv/
 venv/
 
-# Python
+# Python(Cache)
 __pycache__/
 *.pyc
 
