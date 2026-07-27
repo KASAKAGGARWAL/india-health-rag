@@ -7,7 +7,7 @@
 The objective of this project was to build a Retrieval-Augmented Generation (RAG) application capable of answering questions from the Press Information Bureau's *India's Health Transformation* report. The system retrieves relevant information from the document before generating an answer, ensuring that responses are based on the provided content rather than relying only on the language model's pre-trained knowledge.
 
 The application consists of five main stages: document ingestion, text chunking, embedding generation, semantic retrieval, and answer generation using a Large Language Model (LLM). A Streamlit interface was developed to allow users to interact with the system through a simple question-answering interface.
-
+---
 
 ## Design Choices
 
@@ -28,6 +28,7 @@ The application uses **Llama 3.1** through the **Groq API** for response generat
 ### Prompt Design
 
 The prompt is designed to encourage grounded responses. It instructs the language model to answer only from the retrieved document context and to clearly indicate when the required information is not available. This approach helps reduce hallucinations and keeps the generated answers aligned with the source document.
+---
 
 
 ## What I Learned / Research Undertaken
@@ -43,7 +44,7 @@ While integrating the language model, I learned the importance of prompt enginee
 Beyond the AI concepts, I strengthened my practical software development skills by organizing the application into modular components, managing project dependencies, using Git and GitHub for version control, documenting the project with a professional README, and debugging compatibility issues to ensure the application worked correctly on a fresh project setup.
 
 Overall, this assignment significantly improved my understanding of Retrieval-Augmented Generation, semantic search, embedding models, vector databases, prompt engineering, and the end-to-end workflow involved in developing a document-based AI assistant. It also gave me valuable experience in building, testing, debugging, and documenting a complete AI application.
-
+---
 
 ## Limitations
 
@@ -54,6 +55,8 @@ Although the application successfully demonstrates a complete Retrieval-Augmente
 - The retrieval process uses exact vector search and does not include hybrid retrieval methods such as keyword-based search combined with semantic search.
 - Responses are generated from the retrieved context, but individual sentences are not linked to specific citations within the document.
 - The application is designed for local execution and has not been deployed on a cloud platform.
+
+---
 
 
 ## Future Improvements
